@@ -10,11 +10,12 @@ for(int i=0;i<a;i++)
   EEPROM.writeByte(i,i);
 
 }
+EEPROM.commit();
 for(int i=0;i<a;i++)
 {
     Serial.print((byte)EEPROM.read(i));Serial.print(" ");
 }
-EEPROM.commit();
+
 }
 
 void loop() {
